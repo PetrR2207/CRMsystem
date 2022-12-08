@@ -5,7 +5,18 @@
 <a class="navbar-brand" href="{% url 'personal_account_admin:auth' %}">
     <span>ЛК администратора</span>
 </a>
+<br>
+<a class="navbar-brand" href="{% url 'blog:blog' %}">
+    <span>Блог</span>
+</a>
+<br>
 
 <h1>CRM система для Образовательных Учреждений</h1>
 
+{% for project in projects %}
 
+<h2>{{ project.title }}</h2>
+
+<img src="{{project.image.url}}">
+
+{% endfor %}

@@ -1,0 +1,12 @@
+<h1>Блог учеников</h1>
+<a class="navbar-brand" href="{% url 'home' %}">
+    <span>Назад на главную</span>
+</a>
+
+{% for data in blog %}
+
+<h2>{{ data.title }}</h2>
+<h3>{{ data.description }}</h3>
+<a>{{ data.date|date:'M d Y'|upper }}</a>
+
+{% endfor %}
